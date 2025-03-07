@@ -1,0 +1,111 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #F7E6A4;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    min-width: 400px;
+    max-width: 800px;
+    max-height: 400px;
+    margin: auto;
+    padding: 20px;
+    background: #FFF8DC;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2, h3 {
+    font-weight: bold;
+}
+
+.language-switcher {
+    margin-top: 20px;
+}
+
+.lang-btn {
+    background: #4A90E2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.lang-btn:hover {
+    background: #357ABD;
+}
+
+.lang-btn.active {
+    background: #2C5FA7;
+}
+
+.start-btn, .submit-btn {
+    background: #1E88E5;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: block;
+    margin: 20px auto;
+}
+
+.start-btn:hover, .submit-btn:hover {
+    background: #1565C0;
+}
+
+#user-answer {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #4A90E2;
+    border-radius: 8px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#game-screen {
+    padding: 20px;
+    border-radius: 12px;
+}
+
+#game-over-screen {
+    background: #FFCCBC;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    padding: 10px 0;
+    background: transparent;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}

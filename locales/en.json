@@ -1,0 +1,11 @@
+{
+    "title": "Capital Quiz",
+    "start_quiz": "Start Quiz",
+    "country_name": "What is the capital of {country}?",
+    "enter_answer": "Your answer",
+    "submit": "Enter",
+    "correct": "Correct answer:",
+    "score": "Score: ",
+    "wrong": " wrong answer!",
+    "language": "Choose Language"
+  }

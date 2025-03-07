@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= translations.title %></title>
+  <link rel="stylesheet" href="/styles/main.css"> 
+</head>
+<body>
+  <div class="container">
+    <!-- Dil değiştirme butonları -->
+
+
+    <% if (isGameOver) { %>
+        <!-- Oyun bitiş ekranı -->
+        <div id="game-over-screen">
+          <h2><%= userAnswer %><%= translations.wrong %></h2>
+          <p><%= translations.correct %> <strong><%= correctAnswer %></strong></p>
+          <h3><%= translations.score %><%= score %></h3>
+          <form method="POST" action="/start-game">
+            <button type="submit" class="start-btn"><%= translations.start_quiz %></button>
+          </form>
+        </div>
+      <% } else { %>
+        <!-- Başlama ekranı -->
+        <div id="start-screen" class="<%= country ? 'hidden' : '' %>">
+          <form method="POST" action="/start-game">
+            <button type="submit" id="start-btn" class="start-btn">
+              <%= translations.start_quiz %>
+            </button>
+          </form>
+        </div>
+      
+        <!-- Oyun ekranı -->
+        <div id="game-screen" class="<%= country ? '' : 'hidden' %>">
+          <h2 id="country-name"><%= translations.country_name.replace('{country}', country) %></h2>
+          <h3 id="score"><%= translations.score %><%= score %></h3>
+          <form id="answer-form" method="POST" action="/submit-answer">
+            <input 
+              type="text" 
+              id="user-answer" 
+              name="answer" 
+              placeholder="<%= translations.enter_answer %>" 
+              required 
+            />
+            <button type="submit" id="submit-answer" class="submit-btn">
+              <%= translations.submit %>
+            </button>
+          </form>
+        </div>
+      <% } %>
+  </div>
+  <% if (!gameActive) { %>
+    <div class="language-switcher">
+      <form method="POST" action="/change-language">
+        <button name="lang" value="tr" class="lang-btn <%= lang === 'tr' ? 'active' : '' %>">TR</button>
+        <button name="lang" value="en" class="lang-btn <%= lang === 'en' ? 'active' : '' %>">EN</button>
+      </form>
+    </div>
+  <% } %>
+  <footer>
+    <p>Designed by <strong>Galip Enes Doğan</strong></p>
+  </footer>
+  <script src="/scripts/app.js"></script>
+</body>
+</html>

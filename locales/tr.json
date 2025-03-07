@@ -1,0 +1,11 @@
+{
+    "title": "Başkent Quiz",
+    "start_quiz": "Quize Başla",
+    "country_name": "{country} ülkesinin başkenti nedir?",
+    "enter_answer": "Cevabınız",
+    "submit": "Gönder",
+    "score": "Skor: ",
+    "correct": "Doğru cevap:",
+    "wrong": " yanlış cevap!",
+    "language": "Dil Seçin"
+  }
